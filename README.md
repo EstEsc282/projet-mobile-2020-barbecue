@@ -12,6 +12,7 @@ Technologies utilisées :
 -gesture swipe pour accéder au classement
 -screenshot du score à la fin 
 -localstorage des scores de toutes les parties faites sur cet appareil
+-lock screen en format paysage
 
 Possibilités d'ajout : 
 -dater les scores
