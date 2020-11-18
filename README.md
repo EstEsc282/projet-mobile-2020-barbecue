@@ -7,7 +7,7 @@ Application jeu d'un simulateur de cuisson d'aliments sur un barbecue.
 
 Technologies utilisées : 
 -La base de données FireStore pour enregistrer le classement des meilleurs scores de chaque joueur
--La librairie graphique (pas encore choisie) pour jouer au jeu 
+-La librairie graphique SnapSVG pour jouer au jeu 
 -Cordova pour tout le projet
 -gesture swipe pour accéder au classement
 -screenshot du score à la fin 
