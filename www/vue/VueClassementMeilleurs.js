@@ -3,6 +3,7 @@ class VueClassementMeilleurs{
 
         this.html = document.getElementById("html-vue-classement-meilleurs").innerHTML;
         this.listeMeilleurScoresDonnee = null;
+        this.actionAjouterScore = null;
 
 
     }
@@ -10,6 +11,9 @@ class VueClassementMeilleurs{
     initialiserListeMeilleurScores(listeMeilleurScoresDonnee){
         this.listeMeilleurScoresDonnee = listeMeilleurScoresDonnee;
 
+    }
+    initialiserActionAjouterScore(actionAjouterScore){
+        this.actionAjouterScore = actionAjouterScore;
     }
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
@@ -33,6 +37,15 @@ class VueClassementMeilleurs{
             }
 
         listeMeilleurScores.innerHTML = listeMeilleurScoresHTMLRemplacement;
+    }
+    
+    ajouter(){
+        
+        let score = "25";
+        let nom = "testAjout";
+        let dateScore = "12/05/19";
+        this.actionAjouterScore(new Score(nom,score,dateScore,null));
+
     }
 
 

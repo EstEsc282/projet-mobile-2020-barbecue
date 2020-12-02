@@ -4,6 +4,7 @@ class Application{
         this.firestoreDAO = firestoreDAO;
 
         this.vueClassementMeilleurs = vueClassementMeilleurs;
+        this.vueClassementMeilleurs.initialiserActionAjouterScore(score =>this.actionAjouterScore(score));
         this.vueJeu = vueJeu;
         this.vueMenu = vueMenu;
 
@@ -43,9 +44,14 @@ class Application{
             this.vueJeu.afficher();
         }else{
             this.vueClassementMeilleurs.initialiserListeMeilleurScores(this.firestoreDAO.lister());
+            this.vueClassementMeilleurs.ajouter();
             this.vueClassementMeilleurs.afficher();
 
         }
+    }
+    actionAjouterScore(score){
+        this.firestoreDAO.ajouter(score);
+        //this.window.location.hash = "#menu";
     }
 
 

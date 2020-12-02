@@ -26,20 +26,20 @@ class FirestoreDAO{
 
         return this.listeMeilleurScores;
     }
-   /* ajouter(nouveauMeilleurScore){
+    ajouter(score){
 
-        if(this.listeVelo.length > 0)
-            velo.id = this.listeVelo[this.listeVelo.length-1].id + 1;
+        if(this.listeMeilleurScores.length > 0)
+            score.id = this.listeMeilleurScores[this.listeMeilleurScores.length-1].id + 1;
         else
-            velo.id = 0;
+            score.id = 0;
 
-        this.listeVelo[velo.id] = velo;
+        this.listeMeilleurScores[score.id] = score;
 
-        localStorage['velo'] = JSON.stringify(this.listeVelo);
-        console.log("JSON.stringify(this.listeVelo) : " +
-                    JSON.stringify(this.listeVelo));
+        localStorage['meilleurScores'] = JSON.stringify(this.listeMeilleurScores);
+        console.log("JSON.stringify(this.listeMeilleurScores) : " +
+                    JSON.stringify(this.listeMeilleurScores));
 
-    }*/
+    }
 
 
 
