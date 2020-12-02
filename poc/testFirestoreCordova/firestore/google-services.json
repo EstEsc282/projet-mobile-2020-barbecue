@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "154873546215",
+    "firebase_url": "https://barbecue-6d70d.firebaseio.com",
+    "project_id": "barbecue-6d70d",
+    "storage_bucket": "barbecue-6d70d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:154873546215:android:4e69de8b0b66bbecafe942",
+        "android_client_info": {
+          "package_name": "com.exemple.firestore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "154873546215-6nmsf4aoevv93lauenkb8se40jmdkonk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWosaGuJOPDcYc5UBN3nPS2YQ4WPlI4iE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "154873546215-6nmsf4aoevv93lauenkb8se40jmdkonk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
