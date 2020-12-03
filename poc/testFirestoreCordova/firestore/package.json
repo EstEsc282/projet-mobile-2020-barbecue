@@ -21,13 +21,15 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-firestore": {
         "ANDROID_FIREBASE_FIRESTORE_VERSION": "21.3.1"
-      }
+      },
+      "cordova-support-google-services": {}
     },
     "platforms": [
       "android"
     ]
   },
   "dependencies": {
-    "cordova-plugin-firestore": "4.1.1"
+    "cordova-plugin-firestore": "4.1.1",
+    "cordova-support-google-services": "1.4.1"
   }
 }
