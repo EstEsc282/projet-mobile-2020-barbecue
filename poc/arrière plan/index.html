@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="snapsvg/dist/snap.svg-min.js"></script>
+
+            <script>
+                window.onload = function() {
+
+                        var largeurFenetre = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                        var hauteurFenetre = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                        var surfaceTravail = Snap(largeurFenetre*0.991, hauteurFenetre*0.97);
+
+                        var loaderVisuel = surfaceTravail.g();
+
+                        var arrierePlan1 = loaderVisuel.image("arrierePlan.jpg", 0,0, largeurFenetre, hauteurFenetre);
+
+                        var filtreFlou = surfaceTravail.filter(Snap.filter.blur(4));
+
+                        arrierePlan1.attr({ filter: filtreFlou});
+
+                        //regroupement.drag(); Permet de déplacer les éléments avec sa souris
+                }
+            </script>        
+    </head>
+    <body>   
+    </body>
+</html>

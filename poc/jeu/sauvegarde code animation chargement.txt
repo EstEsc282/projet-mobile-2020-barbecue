@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="snapsvg/dist/snap.svg-min.js"></script>
+
+            <script>
+                window.onload = function() {
+
+                        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                        var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                        var s = Snap(w*0.991,h*0.97);
+
+                        var g = s.g();
+
+                        var background = g.image("background.jpg", 0,0, w, h);
+
+                        var barre = s.rect(w - w + 1, h - 50, w, 50);
+                        barre.attr({fill: "grey"});
+
+	                    var barreChargement = s.rect(w - w + 1, h - 50, 10, 50);
+	                    barreChargement.attr({fill: "orange"});
+
+	                    barreChargement.animate({transform: 's600, 1'}, 7500);
+
+	                    //var logo = g.image("logo.jpg", w/4,0, 100, 200 );                    
+                }
+            </script>        
+    </head>
+    <body>   
+    </body>
+</html>

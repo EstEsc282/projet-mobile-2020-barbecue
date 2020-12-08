@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <script src="snapsvg/dist/snap.svg-min.js"></script>
+
+            <script>
+                window.onload = function() {
+
+                        var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                        var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+                        var s = Snap(w*0.991,h*0.97);
+                        s.attr({stroke: "black", strokeWidth: 4});
+
+                        var hautGauche = s.circle(0, 0, 100);                        
+                        hautGauche.attr({fill: "blue", fillOpacity: 0.1});
+                        hautGauche.animate({r: (h)-30}, 5000);
+
+                        var basDroite = s.circle(w, h, 100);
+                        basDroite.attr({fill: "red",  fillOpacity: 0.1});
+                        basDroite.animate({r: h}, 5000);   
+
+                        hautGauche.animate({fillOpacity: +1}, 5000);                      
+                        basDroite.animate({fillOpacity: +1}, 5000);
+
+                }
+            </script>        
+    </head>
+    <body>   
+    </body>
+</html>
