@@ -34,7 +34,6 @@ class Application{
 
         if(!hash){
             this.vueChargement.afficher();
-            //this.vueMenu.afficher();
 
         }else if(hash.match(/^#menu/)){
             this.vueMenu.afficher();
