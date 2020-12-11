@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.exemple.firestore" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>FireStore</name>
+<widget id="com.projet.barbecue" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>BarbecueProjet</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
@@ -17,17 +17,9 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-		<resource-file src="google-services.json" target="app/google-services.json" />
-		<preference name="AndroidLaunchMode" value="singleTask" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-	<universal-links>
-    <host name="projetbarbecue.page.link" scheme="https" />
-    <host name="barbecue-6d70d.firebaseapp.com" scheme="https">
-        <path url="/__/auth/callback"/>
-    </host>
-</universal-links>
 </widget>

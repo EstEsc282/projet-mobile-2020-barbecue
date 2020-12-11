@@ -22,14 +22,23 @@
       "cordova-plugin-firestore": {
         "ANDROID_FIREBASE_FIRESTORE_VERSION": "21.3.1"
       },
-      "cordova-support-google-services": {}
+      "cordova-support-google-services": {},
+      "cordova-plugin-buildinfo": {},
+      "cordova-universal-links-plugin": {},
+      "cordova-plugin-browsertab": {},
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "android"
     ]
   },
   "dependencies": {
+    "cordova-plugin-browsertab": "0.2.0",
+    "cordova-plugin-buildinfo": "4.0.0",
+    "cordova-plugin-compat": "1.2.0",
     "cordova-plugin-firestore": "4.1.1",
-    "cordova-support-google-services": "1.4.1"
+    "cordova-plugin-inappbrowser": "4.1.0",
+    "cordova-support-google-services": "1.4.1",
+    "cordova-universal-links-plugin-fix": "1.2.1"
   }
 }
