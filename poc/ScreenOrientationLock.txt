@@ -1,4 +1,4 @@
-Choisir le format ci-dessous:
+Choisir l'un des formats ci-dessous:
 android:screenOrientation="landscape"
 android:screenOrientation="portrait"
 
