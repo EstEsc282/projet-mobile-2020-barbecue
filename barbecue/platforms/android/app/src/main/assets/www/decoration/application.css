@@ -1,0 +1,231 @@
+﻿@import "normalize.css" ;
+
+@font-face {
+  font-family: 'Chicken Quiche';
+  src: url('font/chicken-quiche/Chicken Quiche.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Paper Flowers';
+  src: url('font/paper_flowers/Paper Flowers.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Starkey';
+  src: url('font/starkey/Starkey_PERSONAL_USE.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Cycling';
+  src: url('font/cycling/CYCLING_.TTF')  format('truetype');
+}
+
+:root {
+  --theme-rouge: #fd341f;
+  --theme-blanc-transparent: rgba(255,255,255,0.3);
+  --theme-bleu-pale: rgba(151,219,246,1);
+  --theme-bleu-fonce: rgba(63,155,191,1);
+  --theme-vert: #408450;
+  --theme-blanc: white;
+  --theme-noir: black;
+  --theme-noir-transparent: rgba(0,0,0,0.3);
+
+  --theme-bordure-rondeur: 0.5rem;
+}
+
+html {
+  font-family:'Paper Flowers', sans-serif;
+  font-size:38px;
+}
+
+#liste-meilleur-scores {
+  list-style-type:none;
+}
+
+.liste-meilleur-scores-item {
+  color:var(--theme-rouge);
+  text-transform : capitalize;
+  text-decoration:none;
+}
+
+#liste-meilleur-scores li {
+  position:relative;
+  display:block;
+  margin-bottom:0.25rem;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  padding-left:1.50rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+#liste-meilleur-scores li::before {
+   content:"X";
+   text-align:center;
+   color:var(--theme-rouge);
+   font-size:1.25rem;
+   position:absolute;
+   top:0.1rem;
+   left:0.25rem;
+   height:1rem;
+   width:1rem;
+
+   font-family:'Cycling', sans-serif;
+
+
+}
+
+fieldset {
+  color:var(--theme-rouge);
+  border-color: var(--theme-rouge);
+  border-radius:var(--theme-bordure-rondeur);
+}
+
+input[type="text"],
+textarea {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:var(--theme-blanc-transparent);
+  border-radius:var(--theme-bordure-rondeur);
+}
+
+#page-chargement-application{
+  position:relative;
+  height: 100%;
+  background-image:url(../decoration/illustration/background.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-attachment:fixed;
+
+  text-align:center;
+  font-size:2rem;
+  font-family:'Chicken Quiche', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+
+  padding:10%;
+  color:var(--theme-rouge);
+  text-shadow: 2px 2px var(--theme-noir);
+}
+
+#tutoriel{
+  text-align:center;
+  font-size:1rem;
+  font-family:'Chicken Quiche', sans-serif;
+  font-weight:normal;
+
+  padding:10%;
+  color:var(--theme-blanc);
+  text-shadow: 2px 2px var(--theme-noir);
+}
+
+#bouton-tutoriel{
+  text-align:center;
+  text-decoration: none;
+  font-size:2rem;
+  font-family:'Chicken Quiche', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+  padding:10%;
+  color:var(--theme-rouge);
+
+  width: 380px;
+  padding: 12px;
+  -webkit-animation: breathing 5s ease-out infinite normal;
+  animation: breathing 5s ease-out infinite normal;
+
+  background: var(--theme-noir);
+  color: var(--theme-rouge);
+  -webkit-font-smoothing: antialiased; 
+}
+
+.page {
+  position:relative;
+  background-color:cadetblue;
+  padding:5%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  position:relative;
+  height: 100%;
+  background-image:url(../decoration/illustration/background.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
+  background-attachment:fixed;
+  color:var(--theme-rouge);
+}
+
+
+.page h1{
+  font-family:'Chicken Quiche', sans-serif;
+  text-align:center;
+  font-size:1.5rem;
+  font-family:'Chicken Quiche', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+  color:var(--theme-blanc);
+  text-shadow: 2px 2px var(--theme-noir);
+
+}
+
+.page h2,
+.page p {
+  background-color:var(--theme-blanc-transparent);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+}
+
+
+.action{
+  position:relative;
+  display:block;
+  text-decoration: none;
+  font-family:sans-serif;
+  background-color:darkgoldenrod;
+  color:var(--theme-blanc);
+  border:0px transparent solid;
+  border-radius:var(--theme-bordure-rondeur);
+  padding:0.25rem;
+  font-family:'Starkey', sans-serif;
+  font-size:1rem;
+  text-align:center;
+  width:50%;
+  margin:0 auto;
+  box-sizing: border-box;
+  margin-top:0.25rem;
+  margin-bottom:0.25rem;
+  box-shadow: 2px 2px var(--theme-blanc);
+}
+
+.action:active {
+  border:0px transparent solid;
+}
+
+
+.image-barbecue {
+  border:5px black solid;
+  border-radius: 5px;
+  width: 60%;
+  height: 13rem;
+}
+
+.liste-viandes {
+  display: inline-block;
+  border:5px black solid;
+  border-radius: 5px;
+  background-color: var(--theme-noir-transparent);
+  width: 35%;
+  height: 13rem;
+}
+
+.liste-viandes img {
+  margin: 0.35rem;
+  border: 4px var(--theme-bleu-fonce) solid;
+  border-radius: 20px;
+  background-color: var(--theme-bleu-pale);
+  width: 25%;
+}
