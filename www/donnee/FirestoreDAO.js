@@ -8,7 +8,18 @@ class FirestoreDAO{
             {nom:"Esteban",score:"15",dateScore:"01/12/20",id:3}]
 
         //this.listeMeilleurScores = [];
-
+        var firebaseConfig = {
+            apiKey: "AIzaSyA1eTUjMEhvujywhyIt_HHOXxePknm5w0w",
+            authDomain: "barbecue-6d70d.firebaseapp.com",
+            databaseURL: "https://barbecue-6d70d.firebaseio.com",
+            projectId: "barbecue-6d70d",
+            storageBucket: "barbecue-6d70d.appspot.com",
+            messagingSenderId: "154873546215",
+            appId: "1:154873546215:web:ad77a1a104198e31afe942"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        
     }
 
     lister(){
@@ -23,7 +34,16 @@ class FirestoreDAO{
                                this.listeMeilleurScores[position].id);
             this.listeMeilleurScores[score.id] = score;
         }
-
+        //------------------------Test Firestore---------------------------
+        var db = firebase.firestore();
+        db.collection("MeilleurScores").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            console.log(`${doc.id} => ${doc.data()}`);
+            });
+        });
+        
+        
+        //-----------------------------------------------------------------
         return this.listeMeilleurScores;
     }
     ajouter(score){

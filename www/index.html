@@ -11,7 +11,8 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"-->
+            <!--meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;img-src 'self' data: content:; script-src 'self' https://www.gstatic.com 'unsafe-inline' 'unsafe-eval'; script-src 'self' https://firestore.googleapis.com 'unsafe-inline' 'unsafe-eval'; "-->
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -21,12 +22,22 @@
    <!-- <script src="cordova.js"></script> A AJOUTER PLUS TARD-->
     <script src="librairieGraphique/snapsvg/dist/snap.svg-min.js"></script>
     <script src="modele/Score.js"></script>
+    
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     <script src="donnee/FirestoreDAO.js"></script>
+    
 
     <script src="vue/VueChargement.js"></script>
     <script src="vue/VueJeu.js"></script>
-    <script src="vue/VueFinJeu.js"></script>
     <script src="vue/VueMenu.js"></script>
+    <script src="vue/VueFinJeu.js"></script>
     <script src="vue/VueClassementMeilleurs.js"></script>
 
     <script defer src="Application.js"></script>
