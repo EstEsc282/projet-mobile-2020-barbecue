@@ -51,18 +51,40 @@ class FirestoreDAO{
         return this.listeMeilleurScores;
     }
     ajouter(score){
-
+        var db = firebase.firestore();
+        var dateActuelle = firebase.firestore.Timestamp.fromDate(new Date());
         if(this.listeMeilleurScores.length > 0)
             score.id = this.listeMeilleurScores[this.listeMeilleurScores.length-1].id + 1;
         else
             score.id = 0;
 
-        this.listeMeilleurScores[score.id] = score;
+        db.collection("MeilleurScores").add({
+            nom: score.nom,
+            id: score.id,
+            score: score.score,
+            dateScore: dateActuelle
+        })
+        .then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
+        /*this.listeMeilleurScores[score.id] = score;
 
         localStorage['meilleurScores'] = JSON.stringify(this.listeMeilleurScores);
         console.log("JSON.stringify(this.listeMeilleurScores) : " +
-                    JSON.stringify(this.listeMeilleurScores));
-
+                    JSON.stringify(this.listeMeilleurScores));*/
+    }
+    
+    rechercher(pseudo){
+        
+        //cette fonction servira à rechercher dans la base s'il y a un score pour "pseudo". S'il y a un score il faut renvoyer le score pour pouvoir comparer et ensuite call la fonction modifier, s'il n'y a pas de score il faut call la fonction ajouter
+    }
+    modifier(score){
+        
+        //on modifie le score ainsi que la date en fonction du pseudo, l'id n'est pas modifiée
+        
     }
 
 

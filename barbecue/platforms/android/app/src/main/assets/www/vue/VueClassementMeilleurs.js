@@ -41,10 +41,9 @@ class VueClassementMeilleurs{
     
     ajouter(){
         
-        let score = "25";
+        let score = "45";
         let nom = "testAjout";
-        let dateScore = "12/05/19";
-        this.actionAjouterScore(new Score(nom,score,dateScore,null));
+        this.actionAjouterScore(new Score(nom,score,null,null));
 
     }
 
