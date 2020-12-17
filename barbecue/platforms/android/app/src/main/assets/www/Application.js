@@ -4,7 +4,6 @@ class Application{
         this.firestoreDAO = firestoreDAO;
 
         this.vueClassementMeilleurs = vueClassementMeilleurs;
-        this.vueClassementMeilleurs.initialiserActionAjouterScore(score =>this.actionAjouterScore(score));
         this.vueJeu = vueJeu;
         this.vueMenu = vueMenu;
         this.vueFinJeu = vueFinJeu;
@@ -46,13 +45,30 @@ class Application{
             this.vueFinJeu.afficher();
         }else{
             this.vueClassementMeilleurs.initialiserListeMeilleurScores(this.firestoreDAO.lister());
-            //this.vueClassementMeilleurs.ajouter();
-            this.vueClassementMeilleurs.afficher();
 
+            /* TEST MODIFIER LE SCORE
+            var testScore = new Score("Guillaume",82,null,null);
+            this.firestoreDAO.modifier(testScore);
+            */
+            
+            /* TEST AJOUT NOUVEAU SCORE
+            let score = "42";
+            let nom = "testAjout2";
+            this.actionAjouterScore(new Score(nom,score,null,null));
+            */
+            this.vueClassementMeilleurs.afficher();
+            
         }
     }
+    
     actionAjouterScore(score){
         this.firestoreDAO.ajouter(score);
+        //this.window.location.hash = "#menu";
+    }
+    
+    
+    actionModifierScore(score){
+        this.firestoreDAO.modifier(score);
         //this.window.location.hash = "#menu";
     }
 

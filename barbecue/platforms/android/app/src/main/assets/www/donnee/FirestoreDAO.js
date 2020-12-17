@@ -23,7 +23,8 @@ class FirestoreDAO{
     }
     
 
-    lister(){
+    lister()
+    {
 
         /*if(localStorage['meilleurScores']){
             this.listeMeilleurScores = JSON.parse(localStorage['meilleurScores']);
@@ -35,7 +36,7 @@ class FirestoreDAO{
                                this.listeMeilleurScores[position].id);
             this.listeMeilleurScores[score.id] = score;
         }*/
-        //------------------------Test Firestore---------------------------
+        //------------------------Code Firestore---------------------------
         var db = firebase.firestore();
         db.collection("MeilleurScores").withConverter(convertisseurScore).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -50,7 +51,9 @@ class FirestoreDAO{
         //-----------------------------------------------------------------
         return this.listeMeilleurScores;
     }
-    ajouter(score){
+    
+    ajouter(score)
+    {
         var db = firebase.firestore();
         var dateActuelle = firebase.firestore.Timestamp.fromDate(new Date());
         if(this.listeMeilleurScores.length > 0)
@@ -65,10 +68,10 @@ class FirestoreDAO{
             dateScore: dateActuelle
         })
         .then(function(docRef) {
-            console.log("Document written with ID: ", docRef.id);
+            console.log("Document écrit avec l'ID: ", docRef.id);
         })
         .catch(function(error) {
-            console.error("Error adding document: ", error);
+            console.error("Erreur d'ajout de document: ", error);
         });
         /*this.listeMeilleurScores[score.id] = score;
 
@@ -76,17 +79,65 @@ class FirestoreDAO{
         console.log("JSON.stringify(this.listeMeilleurScores) : " +
                     JSON.stringify(this.listeMeilleurScores));*/
     }
+   
+    modifier(nouveauScore)
+    {
+        var db = firebase.firestore();
+        let idFirestore = "";
+        let ancienScore = new Score(null,null,null,null);
+        var dateActuelle = firebase.firestore.Timestamp.fromDate(new Date());
+        
+        //cette fonction sert à rechercher dans la base s'il y a un score pour "pseudo". S'il y a un score il faut renvoyer le score pour pouvoir comparer et ensuite call la fonction modifier, s'il n'y a pas de score il faut call la fonction ajouter
+        db.collection("MeilleurScores").where("nom", "==", nouveauScore.nom).withConverter(convertisseurScore)
+        .get()
+        .then(function(querySnapshot) {
+            querySnapshot.forEach(function(doc) {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                var scoreFirestore = doc.data();
+                ancienScore = scoreFirestore;
+                idFirestore = doc.id;
+                
+                if(ancienScore.score < nouveauScore.score)
+                {
+
+                    //----------on modifie le score ainsi que la date en fonction du pseudo, l'id n'est pas modifiée----------
+                    //console.log("ID firestore =", idFirestore);
+                    var scoreAModifier = db.collection("MeilleurScores").doc(idFirestore);
+
+                    /*return scoreAModifier.update({ ANCIEN TEST NON FONCTIONNEL
+                        score: nouveauScore.score,
+                        dateScore: dateActuelle
+                    })
+                    .then(function() {
+                        console.log("Document successfully updated!");
+                    })
+                    .catch(function(error) {
+                        // The document probably doesn't exist.
+                        console.error("Error updating document: ", error);
+                    });*/
+                    
+                    // change le score
+                    db.collection("MeilleurScores").doc(idFirestore).update({
+                        score: nouveauScore.score,
+                        dateScore: dateActuelle
+                    })
+                    .then(function() {
+                        console.log("Document mis à jour!");
+                    })
+                    .catch(function(error) {
+                        // The document probably doesn't exist.
+                        console.error("Erreur de mise a jour du document: ", error);
+                    });
+
+                } 
+                
+            });
+        })
+        .catch(function(error) {
+            console.log("Erreur en essayant de récupérer le document: ", error);
+        });
     
-    rechercher(pseudo){
-        
-        //cette fonction servira à rechercher dans la base s'il y a un score pour "pseudo". S'il y a un score il faut renvoyer le score pour pouvoir comparer et ensuite call la fonction modifier, s'il n'y a pas de score il faut call la fonction ajouter
     }
-    modifier(score){
-        
-        //on modifie le score ainsi que la date en fonction du pseudo, l'id n'est pas modifiée
-        
-    }
-
-
 
 }
