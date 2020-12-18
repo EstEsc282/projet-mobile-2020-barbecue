@@ -13,7 +13,7 @@ class VueJeu{
 
     afficher(){
         document.getElementsByTagName("body")[0].innerHTML = this.html;
-
+        //mettre le code de Jeu.js ici
         /* let listeViandesHTML = document.getElementById("liste-viandes");
         const listeViandesInnerHTML = listeViandesHTML.innerHTML;
         let listeViandesHTMLRemplacement = "";
