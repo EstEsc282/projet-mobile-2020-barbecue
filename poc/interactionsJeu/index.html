@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test SVG</title>
+    <script src="snapsvg/dist/snap.svg.js"></script>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var largeurFenetre = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var hauteurFenetre = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+            var surface = Snap(largeurFenetre*0.991, hauteurFenetre*0.97);
+            var filtreFlou = surface.filter(Snap.filter.blur(4));
+
+            var loader = surface.g();
+
+            var arrierePlan1 = loader.image("images/arrierePlan.jpg", 0,0, largeurFenetre, hauteurFenetre);
+            arrierePlan1.attr({ filter: filtreFlou});
+
+            var table = loader.image("images/table.png", largeurFenetre*0.1, hauteurFenetre*0.6, largeurFenetre*0.4, hauteurFenetre*0.35);
+
+            var barbecue = loader.image("images/bbq.png", largeurFenetre*0.6, hauteurFenetre*0.6, largeurFenetre*0.2, hauteurFenetre*0.3);
+
+            var saucisse = loader.image("images/saucisse.png", largeurFenetre*0.135, hauteurFenetre*0.55, largeurFenetre*0.1, hauteurFenetre*0.15);
+                saucisse.drag();
+
+            var timer = 60;
+            var cuisson = 0;
+            var estGagne = false;
+
+            var hitbox = barbecue.getBBox();
+            var posSaucisse = saucisse.getBBox();
+
+            var i = setInterval(function() {
+                posSaucisse = saucisse.getBBox();
+                if (Snap.path.isPointInsideBBox(hitbox, posSaucisse.cx, posSaucisse.cy)) {
+                    cuisson++;
+                    console.log("Cuisson de la saucisse : " + cuisson);
+                }
+                if (cuisson == 10) {
+                    saucisse.remove();
+                    saucisse = loader.image("images/saucisse-cuite.png", posSaucisse.x, posSaucisse.y, posSaucisse.width, posSaucisse.height);
+                    saucisse.drag();
+                    estGagne = true;
+                    if (cuisson == 20) {
+                        saucisse.remove();
+                        saucisse = loader.image("images/saucisse-cramée.png", posSaucisse.x, posSaucisse.y, posSaucisse.width, posSaucisse.height);
+                        saucisse.drag();
+                        estGagne = false;
+                        clearInterval(i);
+                        afficherFinPartie();
+                    }
+                }
+                if (timer == 0) {
+                    clearInterval(i);
+                    afficherFinPartie();
+                }
+                console.log(timer);
+                timer--;
+            }, 1000);
+            
+            function afficherFinPartie() {
+                if (estGagne) console.log("C'est gagné !");
+                else console.log("C'est perdu ...");
+            }
+            
+        }
+    </script>
+</body>
+</html>
