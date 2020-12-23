@@ -20,13 +20,12 @@ Possibilités d'ajout :
 1 Page Classement local de tout les scores effectués sur l'appareil
 -localstorage des scores de toutes les parties faites sur cet appareil
 
-
-
 1 Page Menu (avec un beau arrière plan)
 1 Page Classement (avec classement des meilleurs scores sur firestore)
 1 Page Jeu : Cuire des morceaux de viande sans les cramer, sinon perdu
 1 Page Fin de Jeu : avec affichage du score obtenu + bouton screenshot
 
 
-
 Déroulement du Jeu : Lancement->Page de chargement avec tutoriel->menu ,swipe pour classement en ligne,bouton jouer->page de jeu avec le jeu->fin de partie entrer le pseudo +enregistrement du score si celui-ci est plus grand que celui qui est sur Firebase pour le même pseudonyme
+
+Lien Youtube de la vidéo de présentation : https://youtu.be/rbv7ni33Ad0
