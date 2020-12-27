@@ -1,0 +1,6 @@
+<ion-content padding [class.newBG]="state">
+    <button ion-button ontline (click)="screenShot()">Screenshot (PIC)</button>
+    <button ion-button ontline (click)="screenShotURI()">Screenshot (URI)</button>
+    
+    <img src="{{ screen }}" *ngIf="state">
+</ion-content>
