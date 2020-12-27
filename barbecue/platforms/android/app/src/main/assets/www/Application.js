@@ -57,7 +57,7 @@ class Application{
             this.actionAjouterScore(new Score(nom,score,null,null));
             */
             this.vueClassementMeilleurs.afficher();
-            
+
         }
     }
     

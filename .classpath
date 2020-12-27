@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="barbecue/node_modules/cordova-android/framework/src"/>
+	<classpathentry kind="src" path="barbecue/node_modules/properties-parser/test"/>
+	<classpathentry kind="src" path="barbecue/platforms/android/app/src/main/java"/>
+	<classpathentry kind="src" path="barbecue/platforms/android/CordovaLib/src"/>
+	<classpathentry kind="src" path="poc/Screenshot/app/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="poc/Screenshot/app/src/androidTest/java"/>
+	<classpathentry kind="src" path="poc/Screenshot/app/src/main/java"/>
+	<classpathentry kind="src" path="poc/Screenshot/app/src/test/java"/>
+	<classpathentry kind="src" path="poc/Swipe/app/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="poc/Swipe/app/src/androidTest/java"/>
+	<classpathentry kind="src" path="poc/Swipe/app/src/main/java"/>
+	<classpathentry kind="src" path="poc/Swipe/app/src/test/java"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/node_modules/cordova-android/framework/src"/>
+	<classpathentry excluding="test/" kind="src" path="poc/testFirestoreCordova/firestore/node_modules/cordova-plugin-firestore/src/android"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/node_modules/cordova-plugin-firestore/src/android/test"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/node_modules/cordova-universal-links-plugin-fix/src/android"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/node_modules/properties-parser/test"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/platforms/android/app/src/main/java"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/platforms/android/CordovaLib/src"/>
+	<classpathentry excluding="test/" kind="src" path="poc/testFirestoreCordova/firestore/plugins/cordova-plugin-firestore/src/android"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/plugins/cordova-plugin-firestore/src/android/test"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordova/firestore/plugins/cordova-universal-links-plugin/src/android"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordovaJavascript/barbecue/node_modules/cordova-android/framework/src"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordovaJavascript/barbecue/node_modules/properties-parser/test"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordovaJavascript/barbecue/platforms/android/app/src/main/java"/>
+	<classpathentry kind="src" path="poc/testFirestoreCordovaJavascript/barbecue/platforms/android/CordovaLib/src"/>
+	<classpathentry kind="lib" path="barbecue/platforms/android/app/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/merged_java_res/debug/out.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_0.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_1.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_2.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_3.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_4.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/app/build/intermediates/project_dex_archive/debug/out/01802f513997e3fe9f680950a00eb8325e16998edc2c39fe42c411d70944820c_5.jar"/>
+	<classpathentry kind="lib" path="poc/Screenshot/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/merged_java_res/debug/out.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_0.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_1.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_2.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_3.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_4.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/app/build/intermediates/project_dex_archive/debug/out/0280dffb2df5b578d5b98a430a8dd56ecf5ee20a2a3ea8f16127ddcad3a91661_5.jar"/>
+	<classpathentry kind="lib" path="poc/Swipe/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="poc/Screenshot/app/build/intermediates/javac/debug/classes"/>
+</classpath>
