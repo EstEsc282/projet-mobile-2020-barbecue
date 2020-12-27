@@ -187,6 +187,17 @@ textarea {
   text-shadow: 2px 2px var(--theme-noir);
 
 }
+.page2 h1{
+  font-family:'Chicken Quiche', sans-serif;
+  text-align:center;
+  font-size:1.5rem;
+  font-family:'Chicken Quiche', sans-serif;
+  font-weight:normal;
+  line-height:1.8rem;
+  color:var(--theme-blanc);
+  text-shadow: 2px 2px var(--theme-noir);
+
+}
 
 .page h2,
 .page p {
