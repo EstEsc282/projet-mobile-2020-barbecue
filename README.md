@@ -31,4 +31,5 @@ Déroulement du Jeu : Lancement->Page de chargement avec tutoriel->menu ,swipe p
 Lien Youtube de la vidéo de présentation : https://youtu.be/rbv7ni33Ad0
 
 Lien YouTube de la vidéo de présentation du swipe au sein du jeu (version ordinateur / navigateur) : https://youtu.be/K-HULVCzRWo
+
 Lien YouTube de la vidéo de présentation du swipe au sein du jeu (version téléphone) : 
