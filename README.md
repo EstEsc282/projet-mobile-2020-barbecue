@@ -29,3 +29,6 @@ Possibilités d'ajout :
 Déroulement du Jeu : Lancement->Page de chargement avec tutoriel->menu ,swipe pour classement en ligne,bouton jouer->page de jeu avec le jeu->fin de partie entrer le pseudo +enregistrement du score si celui-ci est plus grand que celui qui est sur Firebase pour le même pseudonyme
 
 Lien Youtube de la vidéo de présentation : https://youtu.be/rbv7ni33Ad0
+
+Lien YouTube de la vidéo de présentation du swipe au sein du jeu (version ordinateur / navigateur) : https://youtu.be/K-HULVCzRWo
+Lien YouTube de la vidéo de présentation du swipe au sein du jeu (version téléphone) : 
